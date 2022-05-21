@@ -7,7 +7,10 @@ export function User({ name, fullName }) {
   // console.log("name ", name);
   // console.log("fullname ", fullName);
   return (
-    <Link to={`/p/${name}`} className={`flex  items-center gap-4`}>
+    <Link
+      to={`/p/${name}`}
+      className={`flex  items-center gap-4 dark:text-white`}
+    >
       <div className="">
         {!name ? (
           <Skeleton circle width={"64px"} height={"64px"} />

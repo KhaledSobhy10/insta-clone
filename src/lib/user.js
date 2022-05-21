@@ -103,10 +103,10 @@ export async function getProfileInfoByName(displayName) {
   docs.forEach((doc) => {
     const { fullName, following, followers, id } = doc.data();
     profile = {
-      fullName: fullName,
-      followers: followers.length,
-      following: following.length,
-      profileId: id,
+      fullName,
+      followers,
+      following,
+      id,
     };
   });
   return profile;

@@ -10,7 +10,7 @@ export default function SuggestedProfile({ profileId, profileName, userId }) {
   return (
     <>
       {!isFollowed && (
-        <div className="flex justify-between gap-4">
+        <div className="flex justify-between gap-4 dark:text-white">
           <Link to={`/p/${profileName}`} className={`flex  items-center gap-4`}>
             <div className="">
               {!profileName ? (

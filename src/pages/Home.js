@@ -11,7 +11,7 @@ function Home() {
     activeUser: { name, fullName, id, following },
   } = useUser();
   return (
-    <div className="flex flex-col items-center  bg-[#FAFAFA]">
+    <div className="flex flex-col items-center  bg-[#FAFAFA] dark:bg-slate-900 min-h-screen">
       <Header />
       <div className="grid grid-cols-3 justify-between  gap-2 p-2 container">
         <Timeline

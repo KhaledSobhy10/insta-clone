@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 
 import Header from "../components/Header";
@@ -14,9 +14,9 @@ function Profile() {
   const { displayName } = useParams();
 
   return (
-    <div className="flex flex-col justify-center items-center bg-[#FAFAFA] min-h-screen">
+    <div className="flex flex-col justify-center items-center bg-[#FAFAFA]  dark:bg-slate-900 min-h-screen">
       <Header />
-      <main className="container flex flex-col items-center flex-1">
+      <main className="container flex flex-col items-center flex-1 dark:text-white">
         <ProfileContent displayName={displayName} />
       </main>
       <Footer />

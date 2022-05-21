@@ -23,9 +23,10 @@ function Actions({
         <button onClick={handleLikeToggle}>
           {isLiked ? (
             <svg
+              className="text-red-500"
               aria-label="Unlike"
-              color="#ed4956"
-              fill="#ed4956"
+              color="currentColor"
+              fill="currentColor"
               height="24"
               role="img"
               viewBox="0 0 48 48"
@@ -35,9 +36,10 @@ function Actions({
             </svg>
           ) : (
             <svg
+              className="dark:text-white"
               aria-label="Like"
-              color="#262626"
-              fill="#262626"
+              color="currentColor"
+              fill="currentColor"
               height="24"
               role="img"
               viewBox="0 0 24 24"
@@ -50,8 +52,9 @@ function Actions({
         <button onClick={handleCommentClicked}>
           <svg
             aria-label="Comment"
-            color="#262626"
-            fill="#262626"
+            className="dark:text-white"
+            color="currentColor"
+            fill="currentColor"
             height="24"
             role="img"
             viewBox="0 0 24 24"
@@ -69,9 +72,9 @@ function Actions({
         <button>
           <svg
             aria-label="Share Post"
-            className="_8-yf5 "
-            color="#262626"
-            fill="#262626"
+            className="dark:text-white"
+            color="currentColor"
+            fill="currentColor"
             height="24"
             role="img"
             viewBox="0 0 24 24"
@@ -100,9 +103,9 @@ function Actions({
       <button className="col-span-1 flex justify-end ">
         <svg
           aria-label="Save"
-          className="_8-yf5 "
-          color="#262626"
-          fill="#262626"
+          className="dark:text-white"
+          color="currentColor"
+          fill="currentColor"
           height="24"
           role="img"
           viewBox="0 0 24 24"

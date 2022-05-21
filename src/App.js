@@ -2,7 +2,9 @@ import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import * as ROUTES from "./constants/routes";
+
 import UserContext from "./context/user";
+
 import useAuthListener from "./hooks/useAuthListener";
 
 //dummy data
@@ -18,6 +20,7 @@ const NotFound = lazy(() => import("./pages/NoteFound"));
 export default function App() {
   const { user } = useAuthListener();
   // seedDatabase();
+
   return (
     <UserContext.Provider value={user}>
       <BrowserRouter>

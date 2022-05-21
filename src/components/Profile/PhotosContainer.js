@@ -2,24 +2,27 @@ import React, { useState, useEffect } from "react";
 import { getPostsOfUser } from "../../lib/posts";
 import Photo from "./Photo";
 
-function PhotosContainer({ profileId }) {
+function PhotosContainer({ profileId, setTotalPosts }) {
   const [photos, setPhotos] = useState();
-  console.log(profileId);
+  // console.log(profileId);
+
   useEffect(() => {
     if (profileId) {
       getPostsOfUser(profileId).then((data) => {
         setPhotos(data);
-        console.log(data);
+        setTotalPosts(data?.length);
+        // console.log(data);
       });
     }
   }, [profileId]);
+
   return (
     <section className="p-4  h-full flex flex-col items-center">
       <div className="flex items-center gap-2 text-sm font-medium p-4">
         <svg
           aria-label=""
-          color="#262626"
-          fill="#262626"
+          color="dark:text-white text-[#262626]"
+          fill="dark:text-white text-[#262626]"
           height="12"
           role="img"
           viewBox="0 0 24 24"
@@ -86,8 +89,8 @@ function PhotosContainer({ profileId }) {
       {photos ? (
         photos.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {photos.map((data) => (
-              <Photo {...data} />
+            {photos.map((data, index) => (
+              <Photo key={data.docId} {...data} />
             ))}
           </div>
         ) : (

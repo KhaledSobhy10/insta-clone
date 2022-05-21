@@ -22,7 +22,7 @@ function Post({
   const commentInput = useRef(null);
   const handleCommentClicked = () => commentInput.current.focus();
   return (
-    <div className="min-w-[300px] max-w-[500px] border-2 rounded-lg mt-6 mb-8 bg-white">
+    <div className="min-w-[300px] max-w-[500px] border-2 dark:border-slate-500 rounded-lg mt-6 mb-8 bg-white dark:bg-slate-800 dark:text-white">
       <Head userId={userId} profileName={profileName} fullName={fullName} />
       <Image profileName={profileName} photoId={photoId} imageSrc={imageSrc} />
       <Actions

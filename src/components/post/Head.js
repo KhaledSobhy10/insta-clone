@@ -6,7 +6,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 function Head({ userId, profileName, fullName }) {
   console.log();
   return (
-    <div className="flex justify-between items-center gap-2 p-2 border-b-2 rounded-lg">
+    <div className="flex justify-between items-center gap-2 p-2 border-b-2 dark:border-slate-500 rounded-lg">
       <Link to={`/p/${profileName}`} className={`flex  items-center gap-4`}>
         <div>
           {profileName ? (
@@ -28,9 +28,9 @@ function Head({ userId, profileName, fullName }) {
       <button>
         <svg
           aria-label="More options"
-          className="_8-yf5 "
-          color="#262626"
-          fill="#262626"
+          className="dark:text-white text-[#262626]"
+          color="currentColor"
+          fill="currentColor"
           height="24"
           role="img"
           viewBox="0 0 24 24"
